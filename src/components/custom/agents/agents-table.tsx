@@ -6,6 +6,8 @@ import {
   getCoreRowModel,
   ColumnDef,
   flexRender,
+  Row,
+  Cell,
 } from "@tanstack/react-table";
 
 import { ActionsCell } from "../table";
@@ -45,9 +47,9 @@ const AgentAvatar = memo(({ name }: { name: string }) => {
 });
 AgentAvatar.displayName = "AgentAvatar";
 
-const TableRow = memo(({ row }: { row: any }) => (
+const TableRow = memo(({ row }: { row: Row<Agent> }) => (
   <tr className="hover:bg-gray-50 transition-colors duration-150">
-    {row.getVisibleCells().map((cell: any) => (
+    {row.getVisibleCells().map((cell: Cell<Agent, unknown>) => (
       <td key={cell.id} className="px-4 py-3 whitespace-nowrap">
         {flexRender(cell.column.columnDef.cell, cell.getContext())}
       </td>

@@ -1,14 +1,10 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+import { Home, Building2, Users, Settings, X } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
-import { Home, Building2, Users, Settings, X } from "lucide-react";
-import { usePathname } from "next/navigation";
-
-interface SidebarProps {
-  className?: string;
-  onClose?: () => void;
-}
+import { SidebarProps } from "@/types";
 
 const navigationItems = [
   { icon: Home, label: "Dashboard", href: "/dashboard" },
@@ -17,7 +13,7 @@ const navigationItems = [
   { icon: Settings, label: "Settings", href: "/settings" },
 ];
 
-export function Sidebar({ className, onClose }: SidebarProps) {
+export function Sidebar({ onClose }: SidebarProps) {
   const currentPath = usePathname();
 
   const isSelected = (href: string) => {
@@ -27,7 +23,7 @@ export function Sidebar({ className, onClose }: SidebarProps) {
     return currentPath.startsWith(href);
   };
 
-  const handleNavigation = (href: string) => {
+  const handleNavigation = () => {
     // Close mobile menu on navigation
     if (onClose) {
       onClose();
@@ -66,7 +62,7 @@ export function Sidebar({ className, onClose }: SidebarProps) {
           <a
             key={item.href}
             href={item.href}
-            onClick={() => handleNavigation(item.href)}
+            onClick={() => handleNavigation()}
             className={cn(
               "flex items-center gap-3 text-sm font-medium transition-all duration-200 hover:bg-sidebar-hover hover:text-sidebar-active-foreground text-sidebar-foreground rounded-md",
               // Mobile: always show labels, Desktop: conditional based on collapsed state

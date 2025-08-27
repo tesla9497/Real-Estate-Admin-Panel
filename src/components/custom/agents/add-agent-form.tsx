@@ -1,14 +1,8 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import { Button, Input, Select, Label } from "@/components/ui";
-import { Agent } from "@/types/agent";
 import { AgentSchema } from "@/validations/agent";
-
-interface AddAgentFormProps {
-  onSubmit: (agent: Omit<Agent, "id" | "created_at">) => void;
-  onCancel: () => void;
-  isLoading?: boolean;
-}
+import { AddAgentFormProps } from "@/types/forms";
 
 const initialValues = {
   name: "",
@@ -31,7 +25,7 @@ export function AddAgentForm({
 
   const handleSubmit = (
     values: typeof initialValues,
-    { setSubmitting }: any
+    { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
   ) => {
     const agentData = {
       name: values.name.trim(),

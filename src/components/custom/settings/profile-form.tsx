@@ -1,17 +1,12 @@
 import React, { useState } from "react";
+import Image from "next/image";
+import { Camera, User } from "lucide-react";
 import { Formik, Form, Field } from "formik";
 import { Button, Input, Label } from "@/components/ui";
 import { ProfileSchema } from "@/validations/settings";
-import { Camera, User } from "lucide-react";
+import { ProfileFormValues, ProfileFormProps } from "@/types";
 
-interface ProfileFormProps {
-  onSubmit: (values: any) => void;
-  onCancel: () => void;
-  isLoading?: boolean;
-  initialValues?: any;
-}
-
-const defaultInitialValues = {
+const defaultInitialValues: ProfileFormValues = {
   firstName: "",
   lastName: "",
   email: "",
@@ -26,7 +21,7 @@ export function ProfileForm({
   initialValues = defaultInitialValues,
 }: ProfileFormProps) {
   const [profileImage, setProfileImage] = useState<string | null>(
-    initialValues.profileImage || null
+    initialValues.profileImage
   );
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,9 +52,11 @@ export function ProfileForm({
             <div className="relative">
               <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-100 border-2 border-gray-200 flex items-center justify-center">
                 {profileImage ? (
-                  <img
+                  <Image
                     src={profileImage}
                     alt="Profile"
+                    width={96}
+                    height={96}
                     className="w-full h-full object-cover"
                   />
                 ) : (

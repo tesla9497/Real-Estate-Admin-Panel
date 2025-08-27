@@ -4,13 +4,7 @@ import { Lock } from "lucide-react";
 
 import { Button, Input, Label } from "@/components/ui";
 import { SecuritySchema } from "@/validations/settings";
-
-interface SecurityFormProps {
-  onSubmit: (values: any) => void;
-  onCancel: () => void;
-  isLoading?: boolean;
-  initialValues?: any;
-}
+import { SecurityFormProps } from "@/types";
 
 const defaultInitialValues = {
   currentPassword: "",
@@ -34,7 +28,7 @@ export function SecurityForm({
       validationSchema={SecuritySchema}
       onSubmit={handleSubmit}
     >
-      {({ values, errors, touched, setFieldValue }) => (
+      {({ errors, touched }) => (
         <Form className="space-y-6">
           {/* Password Change Section */}
           <div className="space-y-4">

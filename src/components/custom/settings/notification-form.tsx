@@ -4,15 +4,9 @@ import { Mail, MessageSquare, BarChart3, Calendar } from "lucide-react";
 
 import { Button, Label, Switch } from "@/components/ui";
 import { NotificationSchema } from "@/validations/settings";
+import { NotificationFormValues, NotificationFormProps } from "@/types";
 
-interface NotificationFormProps {
-  onSubmit: (values: any) => void;
-  onCancel: () => void;
-  isLoading?: boolean;
-  initialValues?: any;
-}
-
-const defaultInitialValues = {
+const defaultInitialValues: NotificationFormValues = {
   emailNotifications: true,
   smsNotifications: false,
   weeklyReports: false,

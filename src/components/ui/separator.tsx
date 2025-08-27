@@ -17,7 +17,7 @@ const Separator = React.forwardRef<
     const Comp = decorative ? "div" : "hr";
     return (
       <Comp
-        ref={ref as any}
+        ref={ref as React.Ref<HTMLDivElement & HTMLHRElement>}
         role={decorative ? "none" : "separator"}
         aria-orientation={orientation}
         className={cn(

@@ -1,14 +1,9 @@
 "use client";
 
+import { User, ChevronDown, Menu } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
-import { User, ChevronDown, Menu } from "lucide-react";
-
-interface HeaderProps {
-  className?: string;
-  onMobileMenuToggle?: () => void;
-  title: string;
-}
+import { HeaderProps } from "@/types";
 
 export function Header({ className, onMobileMenuToggle, title }: HeaderProps) {
   return (

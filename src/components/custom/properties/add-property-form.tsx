@@ -1,16 +1,8 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import { Button, Input, Select, Label, Textarea } from "@/components/ui";
-import { Property } from "@/types/property";
-import { PropertySchema } from "@/validations";
-
-interface AddPropertyFormProps {
-  onSubmit: (
-    property: Omit<Property, "id" | "property_id" | "created_at">
-  ) => void;
-  onCancel: () => void;
-  isLoading?: boolean;
-}
+import { PropertySchema } from "@/validations/property";
+import { AddPropertyFormProps } from "@/types/forms";
 
 const initialValues = {
   name: "",
@@ -43,7 +35,7 @@ export function AddPropertyForm({
 
   const handleSubmit = (
     values: typeof initialValues,
-    { setSubmitting }: any
+    { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
   ) => {
     const propertyData = {
       name: values.name.trim(),

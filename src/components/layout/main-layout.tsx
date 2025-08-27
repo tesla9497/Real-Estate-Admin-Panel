@@ -4,11 +4,7 @@ import { useState } from "react";
 import { Sidebar } from "./sidebar";
 import { Header } from "./header";
 import { cn } from "@/utils/cn";
-
-interface MainLayoutProps {
-  children: React.ReactNode;
-  title: string;
-}
+import { MainLayoutProps } from "@/types";
 
 export function MainLayout({ children, title }: MainLayoutProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

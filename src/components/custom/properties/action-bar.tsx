@@ -1,7 +1,7 @@
 import { memo, useCallback } from "react";
-import { Plus, Search, MapPin, Home } from "lucide-react";
+import { Search, MapPin, Home } from "lucide-react";
 
-import { Button, Input, Select } from "@/components/ui";
+import { Input, Select } from "@/components/ui";
 
 export const ActionBar = memo(function ActionBar({
   searchProperty,

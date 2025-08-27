@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, useMemo, useCallback, memo } from "react";
+import React, { useState, useMemo, useCallback, memo } from "react";
 import {
   useReactTable,
   getCoreRowModel,
   ColumnDef,
   flexRender,
+  Row,
+  Cell,
 } from "@tanstack/react-table";
 import { Building2 } from "lucide-react";
+import Image from "next/image";
 
 import { ActionsCell } from "../table";
 import { Badge, Button } from "@/components/ui";
@@ -44,9 +47,11 @@ const PropertyImage = memo(({ src, alt }: { src: string; alt: string }) => {
     <div className="h-10 w-10 rounded-lg border border-gray-200 bg-gray-100 flex items-center justify-center">
       {hasValidImage ? (
         <>
-          <img
+          <Image
             src={src}
             alt={alt}
+            width={40}
+            height={40}
             className="h-10 w-10 rounded-lg object-cover"
             onError={handleImageError}
           />
@@ -60,9 +65,9 @@ const PropertyImage = memo(({ src, alt }: { src: string; alt: string }) => {
 });
 PropertyImage.displayName = "PropertyImage";
 
-const TableRow = memo(({ row }: { row: any }) => (
+const TableRow = memo(({ row }: { row: Row<Property> }) => (
   <tr className="hover:bg-gray-50 transition-colors duration-150">
-    {row.getVisibleCells().map((cell: any) => (
+    {row.getVisibleCells().map((cell: Cell<Property, unknown>) => (
       <td key={cell.id} className="px-4 py-3 whitespace-nowrap">
         {flexRender(cell.column.columnDef.cell, cell.getContext())}
       </td>

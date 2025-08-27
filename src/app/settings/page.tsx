@@ -9,6 +9,11 @@ import {
   NotificationForm,
   SecurityForm,
 } from "@/components/custom/settings";
+import {
+  ProfileFormValues,
+  NotificationFormValues,
+  SecurityFormValues,
+} from "@/types";
 
 type SettingsTab = "profile" | "notifications" | "security" | "demo";
 
@@ -16,7 +21,7 @@ export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<SettingsTab>("profile");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleProfileSubmit = async (values: any) => {
+  const handleProfileSubmit = async (values: ProfileFormValues) => {
     setIsLoading(true);
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -24,7 +29,7 @@ export default function SettingsPage() {
     setIsLoading(false);
   };
 
-  const handleNotificationSubmit = async (values: any) => {
+  const handleNotificationSubmit = async (values: NotificationFormValues) => {
     setIsLoading(true);
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -32,7 +37,7 @@ export default function SettingsPage() {
     setIsLoading(false);
   };
 
-  const handleSecuritySubmit = async (values: any) => {
+  const handleSecuritySubmit = async (values: SecurityFormValues) => {
     setIsLoading(true);
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));

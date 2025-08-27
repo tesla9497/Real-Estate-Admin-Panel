@@ -1,21 +1,7 @@
 import React from "react";
-import { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/utils/cn";
-
-interface SummaryCardProps {
-  title: string;
-  value: string | number;
-  icon: LucideIcon;
-  description?: string;
-  trend?: {
-    value: number;
-    isPositive: boolean;
-  };
-  className?: string;
-  color?: string;
-  iconClassName?: string;
-}
+import { SummaryCardProps } from "@/types";
 
 export function SummaryCard({
   title,

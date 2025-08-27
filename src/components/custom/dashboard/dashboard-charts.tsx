@@ -1,21 +1,13 @@
 "use client";
 
 import React from "react";
-import {
-  Users,
-  DollarSign,
-  TrendingUp,
-  Building2,
-  Calendar,
-} from "lucide-react";
+import { DollarSign, TrendingUp, Building2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
 import {
   LineChart,
   Line,
   AreaChart,
   Area,
-  BarChart,
-  Bar,
   PieChart,
   Pie,
   Cell,
@@ -35,28 +27,14 @@ export function DashboardCharts() {
     { month: "Mar", revenue: 48000, properties: 13, agents: 8 },
     { month: "Apr", revenue: 61000, properties: 18, agents: 10 },
     { month: "May", revenue: 55000, properties: 16, agents: 9 },
-    { month: "Jun", revenue: 68000, properties: 20, agents: 11 },
-    { month: "Jul", revenue: 72000, properties: 22, agents: 12 },
-    { month: "Aug", revenue: 65000, properties: 19, agents: 10 },
-    { month: "Sep", revenue: 58000, properties: 17, agents: 9 },
-    { month: "Oct", revenue: 63000, properties: 18, agents: 10 },
-    { month: "Nov", revenue: 59000, properties: 17, agents: 9 },
-    { month: "Dec", revenue: 71000, properties: 21, agents: 11 },
+    { month: "Jun", revenue: 67000, properties: 20, agents: 11 },
   ];
 
   const propertyTypes = [
-    { name: "Apartments", value: 45, color: "#8884d8" },
-    { name: "Houses", value: 30, color: "#82ca9d" },
-    { name: "Condos", value: 15, color: "#ffc658" },
-    { name: "Townhouses", value: 10, color: "#ff7300" },
-  ];
-
-  const agentPerformance = [
-    { name: "Sarah Johnson", sales: 12, rating: 4.8 },
-    { name: "Mike Chen", sales: 10, rating: 4.6 },
-    { name: "Emily Davis", sales: 9, rating: 4.9 },
-    { name: "David Wilson", sales: 8, rating: 4.7 },
-    { name: "Lisa Brown", sales: 7, rating: 4.5 },
+    { name: "Apartment", value: 45, color: "#8884d8" },
+    { name: "House", value: 30, color: "#82ca9d" },
+    { name: "Condo", value: 15, color: "#ffc658" },
+    { name: "Villa", value: 10, color: "#ff7300" },
   ];
 
   return (
