@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "agent_id": "AGT-001",
+    "name": "John Smith",
+    "email": "john.smith@realestate.com",
+    "phone": "+1 (555) 123-4567",
+    "role": "Senior Agent",
+    "created_at": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "agent_id": "AGT-002",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@realestate.com",
+    "phone": "+1 (555) 234-5678",
+    "role": "Property Manager",
+    "created_at": "2024-01-20T14:15:00Z"
+  },
+  {
+    "id": 3,
+    "agent_id": "AGT-003",
+    "name": "Michael Brown",
+    "email": "michael.brown@realestate.com",
+    "phone": "+1 (555) 345-6789",
+    "role": "Sales Agent",
+    "created_at": "2024-02-01T09:45:00Z"
+  },
+  {
+    "id": 4,
+    "agent_id": "AGT-004",
+    "name": "Emily Davis",
+    "email": "emily.davis@realestate.com",
+    "phone": "+1 (555) 456-7890",
+    "role": "Leasing Agent",
+    "created_at": "2024-02-10T16:20:00Z"
+  },
+  {
+    "id": 5,
+    "agent_id": "AGT-005",
+    "name": "David Wilson",
+    "email": "david.wilson@realestate.com",
+    "phone": "+1 (555) 567-8901",
+    "role": "Senior Agent",
+    "created_at": "2024-02-15T11:30:00Z"
+  },
+  {
+    "id": 6,
+    "agent_id": "AGT-006",
+    "name": "Lisa Anderson",
+    "email": "lisa.anderson@realestate.com",
+    "phone": "+1 (555) 678-9012",
+    "role": "Property Manager",
+    "created_at": "2024-03-01T13:45:00Z"
+  },
+  {
+    "id": 7,
+    "agent_id": "AGT-007",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@realestate.com",
+    "phone": "+1 (555) 789-0123",
+    "role": "Sales Agent",
+    "created_at": "2024-03-10T15:20:00Z"
+  },
+  {
+    "id": 8,
+    "agent_id": "AGT-008",
+    "name": "Jennifer Martinez",
+    "email": "jennifer.martinez@realestate.com",
+    "phone": "+1 (555) 890-1234",
+    "role": "Leasing Agent",
+    "created_at": "2024-03-20T10:10:00Z"
+  },
+  {
+    "id": 9,
+    "agent_id": "AGT-009",
+    "name": "Christopher Lee",
+    "email": "christopher.lee@realestate.com",
+    "phone": "+1 (555) 901-2345",
+    "role": "Senior Agent",
+    "created_at": "2024-04-01T12:00:00Z"
+  },
+  {
+    "id": 10,
+    "agent_id": "AGT-010",
+    "name": "Amanda Garcia",
+    "email": "amanda.garcia@realestate.com",
+    "phone": "+1 (555) 012-3456",
+    "role": "Property Manager",
+    "created_at": "2024-04-10T14:30:00Z"
+  }
+]
